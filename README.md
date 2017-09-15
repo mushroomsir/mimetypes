@@ -1,5 +1,5 @@
 # mimetypes
-[![Build Status](https://img.shields.io/travis/mushroomsir/	.svg?style=flat-square)](https://travis-ci.org/mushroomsir/mimetypes)
+[![Build Status](https://img.shields.io/travis/mushroomsir/mimetypes.svg?style=flat-square)](https://travis-ci.org/mushroomsir/mimetypes)
 [![Coverage Status](http://img.shields.io/coveralls/mushroomsir/mimetypes.svg?style=flat-square)](https://coveralls.io/github/mushroomsir/mimetypes?branch=master)
 [![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://github.com/mushroomsir/mimetypes/blob/master/LICENSE)
 [![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://godoc.org/github.com/mushroomsir/mimetypes)

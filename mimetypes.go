@@ -41,7 +41,7 @@ func Lookup(name string) string {
 // Extension lookup the default extension for a MIME type.
 func Extension(mimetype string) string {
 	match := rxExtractType.FindAllStringSubmatch(mimetype, -1)
-	m := types[strings.Trim(strings.ToLower(match[0][1]), " ")]
+	m := types[strings.TrimSpace(strings.ToLower(match[0][1]))]
 	if len(m.Extensions) == 0 {
 		return ""
 	}

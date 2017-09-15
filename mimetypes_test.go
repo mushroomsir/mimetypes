@@ -14,15 +14,15 @@ func TestMimetype(t *testing.T) {
 	if err := json.Unmarshal([]byte(mimetypemap), &dat); err != nil {
 		panic(err)
 	}
-	assert.Equal(837, len(dat))
+	assert.Equal(838, len(dat))
 	for k, v := range dat {
 		if len(v.Extensions) == 0 {
 			delete(dat, k)
 		}
 	}
-	assert.Equal(837, len(dat))
+	assert.Equal(838, len(dat))
 	json.Marshal(dat)
-	assert.Equal(1063, len(extensions))
+	assert.Equal(1065, len(extensions))
 }
 
 func TestLookup(t *testing.T) {

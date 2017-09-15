@@ -11,7 +11,7 @@ before_install:
   - go get github.com/mattn/goveralls
 
 script:
-  - go test -v ./...
+  - go test -race -v ./...
   - go test -coverprofile=mimetypes.coverprofile
   - gover
   - goveralls -coverprofile=mimetypes.coverprofile -service=travis-ci

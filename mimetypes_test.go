@@ -34,6 +34,7 @@ func TestLookup(t *testing.T) {
 		{"text/html", ".html"},
 		{"application/javascript", ".js"},
 		{"application/json", ".json"},
+		{"video/quicktime", "击两次.mov"},
 	}
 	for _, c := range cases {
 		if !assert.Equal(c.result, Lookup(c.val)) {
@@ -60,6 +61,7 @@ func TestExtension(t *testing.T) {
 		{"", ""},
 		{"", "bogus"},
 		{"", "{}"},
+		{"qt", "video/quicktime"},
 	}
 	for _, c := range cases {
 		if !assert.Equal(c.result, Extension(c.val)) {

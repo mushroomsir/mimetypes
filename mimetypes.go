@@ -32,6 +32,13 @@ type MimeValue struct {
 	Charset      string   `json:"charset,omitempty"`
 }
 
+// Set add or set new <mimetype,[ext1,ext2]>
+func Set(mimetype string, exts ...string) {
+	for _, v := range exts {
+		extensions[strings.ToLower(v)] = strings.ToLower(mimetype)
+	}
+}
+
 // Lookup lookup the MIME type for a file path/extension.
 func Lookup(name string) string {
 	ext := strings.Replace(path.Ext(name), ".", "", 1)

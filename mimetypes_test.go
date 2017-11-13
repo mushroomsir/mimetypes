@@ -26,6 +26,8 @@ func TestMimetype(t *testing.T) {
 }
 
 func TestLookup(t *testing.T) {
+	Set("image/heic", "heic")
+
 	assert := assert.New(t)
 	cases := []struct {
 		result string
@@ -35,6 +37,7 @@ func TestLookup(t *testing.T) {
 		{"application/javascript", ".js"},
 		{"application/json", ".json"},
 		{"video/quicktime", "击两次.mov"},
+		{"image/heic", "x.heic"},
 	}
 	for _, c := range cases {
 		if !assert.Equal(c.result, Lookup(c.val)) {
